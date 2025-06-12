@@ -8,7 +8,7 @@ seo:
 
 siteInfo:
   companyName: "Merge Rot"
-  siteUrl: "https://game.azgame.io/merge-brainrot/"
+  siteUrl: "https://www.merge-rot.net"
   email: "HarryC199101@gmail.com"
 gameSettings:
   randomGamesCount: 20
@@ -19,14 +19,12 @@ footer:
       links:
         - text: "More Games"
           url: "/more-games"
-        - text: "Merge Rot"
-          url: "https://game.azgame.io/merge-brainrot/"
-        - text: "Brainrot Games"
-          url: "/brainrot-games"
+        - text: "Merge Fellas"
+          url: "/merge-fellas"
     - title: "Quick Links"
       links:
         - text: "GitHub"
-          url: "https://github.com/brainrotclicker/brainrotclicker"
+          url: "https://github.com/merge-rot"
         - text: "Privacy Policy"
           url: "/privacy-policy"
         - text: "Terms of Service"
