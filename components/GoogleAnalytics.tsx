@@ -9,7 +9,7 @@ const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 // 初始化 Google Analytics
 if (process.env.NODE_ENV === 'production') {
-  ReactGA.initialize("G-QE5C95QB6Q")
+  ReactGA.initialize("G-K5VC67C5F7")
 }
 
 export default function GoogleAnalytics() {
