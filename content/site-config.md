@@ -24,7 +24,7 @@ footer:
     - title: "Quick Links"
       links:
         - text: "GitHub"
-          url: "https://github.com/merge-rot"
+          url: "https://github.com/merge-rot/merge-rot"
         - text: "Privacy Policy"
           url: "/privacy-policy"
         - text: "Terms of Service"
