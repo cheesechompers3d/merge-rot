@@ -10,6 +10,10 @@ interface FooterConfig {
       text: string
       url: string
     }>
+    anchors?: Array<{
+      text: string
+      id: string
+    }>
   }>
   copyright: string
   disclaimer: string
@@ -42,7 +46,39 @@ export default function Footer() {
               {column.description && (
                 <p className="text-gray-400">{column.description}</p>
               )}
-              {column.links && (
+              {/* Games锚点导航，优先anchors字段 */}
+              {Array.isArray((column as any).anchors) ? (
+                <ul className="space-y-2">
+                  {(column as any).anchors.map((item: { text: string; id: string }) => (
+                    <li key={item.id}>
+                      <a
+                        href={`#${item.id}`}
+                        tabIndex={0}
+                        aria-label={`Scroll to ${item.text}`}
+                        className="text-blue-400 hover:text-blue-300 transition-colors cursor-pointer outline-none focus:underline"
+                        onClick={e => {
+                          e.preventDefault();
+                          const el = document.getElementById(item.id);
+                          if (el) {
+                            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }}
+                        onKeyDown={e => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            const el = document.getElementById(item.id);
+                            if (el) {
+                              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                          }
+                        }}
+                      >
+                        {item.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : column.links && (
                 <ul className="space-y-2">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>

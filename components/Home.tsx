@@ -66,7 +66,7 @@ export default function Home({ defaultGame, onGameSelect }: HomeProps) {
   const selectedGame = currentGame ? games?.find(game => game.slug === currentGame) : defaultGame
 
   return (
-    <div>
+    <div id="home">
       <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
         <Navbar 
           isDarkMode={isDarkMode} 
