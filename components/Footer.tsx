@@ -37,11 +37,11 @@ export default function Footer() {
   if (!config) return null
 
   return (
-    <footer className="bg-gray-800 py-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gray-800 py-8 z-[100]">
+      <div className="container mx-auto px-4 lg:px-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {config.columns.map((column, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-left">
               <h3 className="text-2xl font-bold text-white mb-4">{column.title}</h3>
               {column.description && (
                 <p className="text-gray-400">{column.description}</p>
@@ -84,9 +84,19 @@ export default function Footer() {
                     <li key={linkIndex}>
                       <a
                         href={link.url}
-                        className="text-blue-400 hover:text-blue-300 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 transition-colors z-[100] relative"
+                        target={link.url.startsWith('#') ? undefined : "_blank"}
+                        rel={link.url.startsWith('#') ? undefined : "noopener noreferrer"}
+                        onClick={e => {
+                          if (link.url.startsWith('#')) {
+                            e.preventDefault();
+                            const id = link.url.slice(1);
+                            const el = document.getElementById(id);
+                            if (el) {
+                              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                          }
+                        }}
                       >
                         {link.text}
                       </a>

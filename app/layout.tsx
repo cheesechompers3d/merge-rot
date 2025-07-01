@@ -4,6 +4,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics"
 import { ThemeProvider } from '@/components/theme-provider'
 import CanonicalUrl from '@/components/Metadata'
 import ScrollToTop from '@/components/ScrollToTop'
+import FloatingLeftAd from '@/components/FloatingLeftAd'
 import { metadata } from './metadata'
 
 export { metadata }
@@ -24,6 +25,7 @@ export default function RootLayout({
         >
           <CanonicalUrl />
           <GoogleAnalytics />
+          <FloatingLeftAd />
           {children}
           <ScrollToTop />
         </ThemeProvider>

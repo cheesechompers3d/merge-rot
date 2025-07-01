@@ -78,7 +78,7 @@ export default function Home({ defaultGame, onGameSelect }: HomeProps) {
         <main>
           <div className="flex">
             {/* 左侧固定宽度空白区域 */}
-            <div className="hidden lg:block w-[100px] flex-shrink-0">
+            <div className="hidden lg:block w-[200px] flex-shrink-0">
               {/* 这里可以放置一些固定内容或保持空白 */}
             </div>
 

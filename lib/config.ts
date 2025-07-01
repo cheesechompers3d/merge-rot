@@ -11,7 +11,7 @@ export const defaultConfig: SiteConfig = {
     keywords: "Merge Rot, merge game, brainrot game, viral game, physics-based game, puzzle game, online game, browser game"
   },
   advertisement: {
-    key: ""
+    key: "742a4b2f451989a77be30a551a491156"
   },
   gameSettings: {
     randomGamesCount: 20
